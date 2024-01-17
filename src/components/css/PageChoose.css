@@ -1,0 +1,60 @@
+ .Page-Chooser{
+    background-color: rgb(223, 223, 223);
+    position: absolute;
+    width: 80px;
+    left: -80px;
+    padding: 5px;
+    height: 100%;
+    top: 0;
+    border-bottom-left-radius: 11px;
+    border-top-left-radius: 11px;
+}
+
+.Page-Chooser ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+}
+
+.Page-Chooser ul li{
+    background-color: rgb(180, 180, 180);
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 35px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.Page-Chooser ul li:not(:last-child):after{
+    content: '';
+    background-color: rgb(126, 126, 126);
+    bottom: -18px;
+    left: 16px;
+    height: 17px;
+    padding: 0.5px;
+    width: 1px;
+    position: absolute;
+}
+
+.Page-Chooser ul li:is(.active, .passed){
+    background-color: rgb(29, 160, 94);
+    color: white;
+}
+
+.Page-Chooser ul li:is(.active, .passed):not(:last-child):after{
+    content: '';
+    background-color: rgb(19, 109, 64);
+}
+
+.Page-Chooser ul li:hover{
+    /* transition: ease-in 0.5s; */
+}

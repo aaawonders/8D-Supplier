@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap');
+
+.Frame{
+    padding: 10px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    border-radius: 11px;
+    margin: 5px;
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+.Frame .Frame-Label{
+    user-select: none;
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    background-color: white;
+}
+
+.Input-div-Write{
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.Input-div-Write label{
+    font-size: 14px;
+}
+
+.Input-div-Write .Input-Write{
+    border: 1px solid rgb(58, 58, 58);
+    font: 15px;
+    line-height: 1rem;
+    padding: 2px 8px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.Input-div-Write .Input-Write.small{
+    width: 80px;
+}
+
+.Input-div-Write .Input-Write.medium{
+    width: 200px;
+}
+
+.Input-div-Write .Input-Write.big{
+    width: 400px;
+}
+
+.Input-div-Write .Input-Write:focus{
+    outline: none;
+}
+
+
+.Dynamic{
+    padding: 15px;
+    width: 100%;
+}
+
+.Dynamic .Add-Input{
+    width: 30px;
+    height: 35px;
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+}
+
+.Dynamic .Add-Input:hover{
+    background-color: rgb(223, 223, 223);
+    transition: ease-in-out 0.2s;
+}
+
+.Dynamic .Add-Input:active{
+    background-color: rgb(215, 215, 215);
+    transition: ease-in-out 0.2s;
+}
