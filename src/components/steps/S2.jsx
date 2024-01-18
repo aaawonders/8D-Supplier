@@ -7,7 +7,7 @@ import './../css/steps.css'
 library.add(faPlus)
 
 
-const Step1 = () => {
+const Step2 = () => {
 
     const InputWrite = ({label, type, id, onChange, width}) => {
 
@@ -80,15 +80,8 @@ const Step1 = () => {
                 <InputWrite type={'text'} id={1} label={'Nome do Fornecedor'} />
                 <InputWrite type={'text'} id={2} width={"big"} label={'Descrição da Falha'} />
             </Frame>
-            <Frame label={'Dados do Componente'} id={1}>
-                <InputWrite type={'text'} id={1} label={'Código Interno'} />
-                <InputWrite type={'text'} id={2} label={'Quantidade'} />
-            </Frame>
-            <Frame label={'Informações da Equipe'}>
-                <InputTable rows={8} />
-            </Frame>
         </div>
     )
 }
 
-export default Step1
+export default Step2
