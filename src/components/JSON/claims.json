@@ -1,0 +1,35 @@
+[
+    {
+        "lnc": "031/23",
+        "supplier": "Autocom",
+        "data": "27/10/2023",
+        "cod" : "C 100 011",
+        "item": "Carcaça Bruta - 011 012 803rt",
+        "desc": "Falha de Material",
+        "applic": "04C 115 105F",
+        "openby": "Leonardo",
+        "estado": "Aberto"
+    },
+    {
+        "lnc": "015/23",
+        "supplier": "Continental",
+        "data": "19/05/2023",
+        "cod" : "C 014 005",
+        "item": "Parafuso - 014 005",
+        "desc": "Peças com impregnação e com furo de encaixe deslocado.",
+        "applic": "04E 115 105R",
+        "openby": "André",
+        "estado": "Fechado"
+    },
+    {
+        "lnc": "036/23",
+        "supplier": "Wallstabe & Schneider",
+        "data": "14/12/2023",
+        "cod" : "C 019 013",
+        "item": "Guarnição Bloco - 04E 121 119AM",
+        "desc": "Falha de Material",
+        "applic": "04E 121 600DF",
+        "openby": "André",
+        "estado": "Aberto"
+    }
+]

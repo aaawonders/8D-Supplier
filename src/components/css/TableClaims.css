@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap');
+
+.Table-Main{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Table-Main table{
+    text-align: center;
+    border-collapse:collapse;
+    width: 100%;
+    table-layout: auto;
+}
+
+.Table-Main td, .Table-Main th{
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    /* border: 1px solid black; */
+}
+
+.Table-Main thead{
+    user-select: none;
+    background-color: rgb(27, 163, 68);
+    color: white;
+    border: none;
+}
+
+.Table-Main th{
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.Table-Main tr{
+    border: 1px solid black;
+}
+
+.Table-Main input{
+    width: 20px;
+}
+
+
+.Table-Main .td-ckb input{
+    width: 20px;
+}
+
+
+.Table-Main .td-lnc{
+    color: red;
+    width: 50px;
+}
+
+
+/* Tools */
+
+.Upper-Tools{
+    padding: 5px 5px;
+    background-color: rgb(78, 199, 114);
+}
+
+.Options{
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+
+.Options button{
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    padding: 2px;
+    line-height: 25px;
+    color: white;
+    border: none;
+    border-radius: 11px;
+    background-color: transparent;
+}
+
+.Options button:hover{
+    background-color: rgba(255, 255, 255, 0.205);
+    transition: ease-in-out 0.2s;
+}
+
+/* SearchBar */
+
+.Search-space{
+    position: relative;
+    width: 100%;
+}
+
+.Search-space span{
+    position: relative;
+    top: 2px;
+    left: 20px;
+    color: rgba(0, 0, 0, 0.192);
+}
+
+.search{
+    width: 80%;
+    padding-left: 30px;
+}
