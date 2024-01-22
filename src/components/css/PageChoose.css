@@ -18,9 +18,10 @@
     align-items: center;
     gap: 18px;
     position: relative;
+    text-decoration: none;
 }
 
-.Page-Chooser ul li{
+.Page-Chooser ul .Link-Step {
     background-color: rgb(180, 180, 180);
     color: white;
     width: 35px;
@@ -32,9 +33,10 @@
     cursor: pointer;
     position: relative;
     z-index: 2;
+    text-decoration: none;
 }
 
-.Page-Chooser ul li:not(:last-child):after{
+.Page-Chooser ul .Link-Step:not(:last-child):after{
     content: '';
     background-color: rgb(126, 126, 126);
     bottom: -18px;
@@ -45,16 +47,16 @@
     position: absolute;
 }
 
-.Page-Chooser ul li:is(.active, .passed){
+.Page-Chooser ul .Link-Step:is(.active, .passed){
     background-color: rgb(29, 160, 94);
     color: white;
 }
 
-.Page-Chooser ul li:is(.active, .passed):not(:last-child):after{
+.Page-Chooser ul .Link-Step:is(.active, .passed):not(:last-child):after{
     content: '';
     background-color: rgb(19, 109, 64);
 }
 
-.Page-Chooser ul li:hover{
+.Page-Chooser ul .Link-Step:hover{
     /* transition: ease-in 0.5s; */
 }

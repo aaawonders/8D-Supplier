@@ -1,13 +1,87 @@
 {
     "PT" : {
-        "Steps": {
-            "S1":{
-                "step-index" : "D1",
+        "Steps": 
+        [
+            {
+                "stepindex" : "D1",
+                "title": "Descrição da Não-Conformidade",
+                "fields" : {
+                    
+                }
+            },            
+            {
+                "stepindex" : "D2",
+                "title": "Ação(ões) de Contenção(ões)",
+                "fields" : {
+                    
+                }
+            },            
+            {
+                "stepindex" : "D3",
+                "title": "Ação(ões) a Curto Prazo",
+                "fields" : {
+                    
+                }
+            }
+            ,            
+            {
+                "stepindex" : "D4",
+                "title": "Análise da Causa Raiz",
+                "fields" : {
+                    
+                }
+            }
+            ,            
+            {
+                "stepindex" : "D5",
+                "title": "Ações Corretivas  / Preventivas",
+                "fields" : {
+                    
+                }
+            }
+            ,            
+            {
+                "stepindex" : "D6",
+                "title": "Plano de Verificação",
+                "fields" : {
+                    
+                }
+            }
+            ,            
+            {
+                "stepindex" : "D7",
+                "title": "Extensão da Não-Conformidade",
+                "fields" : {
+                    
+                }
+            }
+            ,            
+            {
+                "stepindex" : "D8",
+                "title": "Verificação da Eficácia",
+                "fields" : {
+                    
+                }
+            }
+        ]
+    },
+    "EN" : {
+        "Steps": 
+        [
+            {
+                "stepindex" : "D1",
+                "title": "Non-Conformity Description",
+                "fields" : {
+                    
+                }
+            },            
+            {
+                "stepindex" : "D2",
                 "title": "Descrição da Não-Conformidade",
                 "fields" : {
                     
                 }
             }
-        }
+        ]
     }
 }
