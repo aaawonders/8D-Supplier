@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap');
+
+.OpenClaim{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.OpenClaim .Upper-Tools{
+    width: 100%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.OpenClaim .Upper-Tools .Title{
+    width: 100%;
+    padding: 5px 0px;
+}
+
+.OpenClaim  .Upper-Tools .Op-list{
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    gap: 10px;
+    position: relative;
+}
+
+.OpenClaim .btn-regular{
+    min-width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    transition: ease-in 0.2s;
+}
+
+.OpenClaim .btn-regular:hover{
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: ease-in 0.2s;
+}
+
+.OpenClaim .btn-regular:active{
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
+.btn-text{
+    display: flex;
+    padding: 2px 5px;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.OpenClaim  .btn-changeMode.active{
+    background-color: white;
+    color: rgb(22, 133, 68);
+    animation: pulse 0.2s ease-in-out;
+    animation-delay: 0.2s;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.OpenClaim .Upper-Tools .Op-list .createdby{
+    position: absolute;
+    right: 20px;
+    background-color: white;
+    color: rgb(22, 133, 68);
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    user-select: none;
+}
+
+.OpenClaim  .dropbox{
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 8px;
+    transition: ease-in-out 0.2s;
+}
+
+.OpenClaim  .dropbox:hover{
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: ease-in 0.2s;
+}
+
+.OpenClaim .dropbox.active{
+    background-color: white;
+    color: rgb(22, 133, 68);
+}
+
+.OpenClaim .dropbox .options{
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 150px;
+    font-size: 11px;
+    background-color: white;
+    color: rgb(22, 133, 68);
+    border: 1px solid rgb(22, 133, 68);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transform: translateY(-15px);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility ease-in 0.2s;
+}
+
+.OpenClaim .dropbox .options.active{
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transition: visibility ease-in 0.2s, transform ease-in 0.2s;
+}
+
+.OpenClaim .dropbox .options span{
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.2s;
+}
+
+.OpenClaim .dropbox .options span:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: ease-in-out 0.1s;
+}
+
+.OpenClaim .dropbox .options span:not(:last-child){
+    border-bottom: 1px solid rgba(128, 128, 128, 0.493);
+}
+
+.OpenClaim .dropbox .icon-down{
+    position: absolute;
+    font-size: 10px;
+    right: 4px;
+    bottom: -4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility ease-in 0.2s;
+}
+
+.OpenClaim .dropbox.active .icon-down{
+    position: absolute;
+    font-size: 10px;
+    right: 4px;
+    bottom: -4px;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility ease-in 0.2s;
+}
+
+.OpenClaim .ClaimForm{
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+    width: 100%;
+    /* background-color: grey; */
+}
+
+.OpenClaim .Frame{
+    position: relative;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.OpenClaim .Frame .Frame-title{
+    position: absolute;
+    background-color: white;
+    color: rgb(90, 90, 90);
+    padding: 0px 5px;
+    top: -13px;
+    left: 20px;
+    font-size: 15px;
+    z-index: 3;
+    user-select: none;
+}
+
+
+.OpenClaim .Quant-Table{
+    border-collapse: collapse;
+}
+
+.OpenClaim .Quant-Table thead {
+    border-top-right-radius: 11px;
+    border-top-left-radius: 11px;
+}
+
+
+.OpenClaim .Quant-Table th, .OpenClaim .Quant-Table td{
+    border: 1px solid black;
+}
+
+.OpenClaim .Quant-Table th{
+    padding: 5px 5px;
+    user-select: none;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: rgb(12, 177, 100);
+    border: 1px solid rgb(12, 177, 100);
+    color: white;
+}
+
+.OpenClaim .Quant-Tabl2 td:not(:first-child):not(:last-child){
+    width: 110px;
+}
+
+.OpenClaim .Quant-Table td:last-child{
+    padding: 5px;
+    width: 50px;
+}
+
+.OpenClaim .Quant-Table td input{
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+}
+
+.OpenClaim .Quant-Table td input:focus{
+    outline: none;
+}
+
+.OpenClaim .Quant-Table .btn-action{
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 11px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.OpenClaim .Quant-Table .btn-action svg{
+
+}
+
+.Quant-Table .td-add .btn-action{
+    background-color: rgb(0, 102, 255);
+    color: white;
+}
+
+.Quant-Table .td-remove .btn-action{
+    background-color: rgb(223, 71, 51);
+    color: white;
+}
+
+.div-input{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.div-input.small{
+    width: 350px;
+}
+
+.div-input.medium{
+    width: 500px;
+}
+
+.div-input.big{
+    width: 700px;
+}
+
+
+.div-input label{
+    background-color: rgb(12, 177, 100);
+    border: 1px solid rgba(12, 177, 100, 0.562);
+    color: white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 100%;
+
+    align-self: center;
+    line-height: 30px;
+    padding: 0px 8px;
+    font-size: 11px;
+    user-select: none;
+}
+
+.div-input input{
+    font-size: 11px;
+    border: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    background-color: rgba(229, 243, 236, 0.534);
+    border: 1px solid rgba(12, 177, 100, 0.562);
+    border-bottom: 2px dotted rgb(12, 177, 100);
+}
+
+.div-input input::placeholder{
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.div-input input:focus{
+    outline: none;
+}
+
+.div-input input::selection{
+    background-color: rgb(18, 165, 96);
+    color: white;
+}
+
+
+.div-input .Box-select{
+    position: absolute;
+    width: 100%;
+    top: 34px;
+    background-color: white;
+    color: rgb(13, 105, 62);
+    border: 1px solid rgb(13, 105, 62);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    transform: translateY(-20px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.div-input .Box-select.active{
+    transform: translateY(0px);
+    visibility: visible;
+    opacity: 1;
+    transition: visibility ease 0.2s, transform 0.2s ease;
+}
+
+
+.div-input .Box-select .option{
+    font-size: 12px;
+    padding: 5px 10px;
+    user-select: none;
+}
+
+.div-input .Box-select .option:hover{
+    background-color: rgba(22, 139, 85, 0.6);
+    color: white;
+    transition: ease-in 0.05;
+}
+
+.div-textarea{
+    width: 100%;
+}
+
+.div-textarea textarea{
+    font-size: 11px;
+    padding: 10px;
+    border: none;
+    min-height: 10rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    background-color: rgba(229, 243, 236, 0.534);
+    border: 1px solid rgba(12, 177, 100, 0.562);
+    resize: none;
+}
+
+.div-textarea textarea::placeholder{
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.div-textarea textarea:focus{
+    outline: none;
+}
+
+.div-textarea textarea::selection{
+    background-color: rgb(18, 165, 96);
+    color: white;
+}
+
+.open-box{
+    position: absolute;
+    right: 0;
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.open-box:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: ease-in-out 0.2s;
+}
+
+.open-box.active{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.open-box.active svg{
+    rotate: 180deg;
+}
+
+.delText{
+    position: absolute;
+    right: 20px;
+    border-radius: 8px;
+    width: 30px;
+    color: rgba(173, 0, 0, 0.534);
+    height: 30px;
+    line-height: 30px;
+    font-size: 11px;
+}
+
+.OpenClaim .TypeSelect{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    width: 100%;
+    padding: 5px;
+    user-select: none;
+}
+
+
+.OpenClaim .TypeSelect .type-Option{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.OpenClaim .TypeSelect .type-Option .OptionType{
+    position: relative;
+    margin: 0px 10px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.OpenClaim .TypeSelect .type-Option .OptionType:hover,
+.OpenClaim .TypeSelect .type-Option .OptionType.active
+{
+    color: rgb(7, 105, 7);
+    transition: ease 0.2s;
+}
+
+.OpenClaim .TypeSelect .type-Option .OptionType::before{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    content: '';
+    background-color: rgb(214, 214, 214);
+    border: 2px solid grey;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.OpenClaim .TypeSelect .type-Option .OptionType.T-Dim.active::before{
+    content: 'D';
+    background-color: rgb(221, 52, 0);
+    color: white;
+    border: 2px solid rgb(221, 52, 0);
+}
+
+.OpenClaim .TypeSelect .type-Option .OptionType.T-Vis.active::before{
+    content: 'V';
+    background-color: rgb(59, 0, 221);
+    color: white;
+    border: 2px solid rgb(59, 0, 221);
+}
+
+.deviation-val{
+    background-color: rgb(11, 192, 41);
+    color: white;
+    font-size: 16px;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+.deviation-val.outside{
+    background-color: rgb(221, 52, 0);
+}
+
+.annexx-space{
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 11px;
+    width: 100%;
+    min-height: 20rem;
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.annexx-space .annex-item{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 120px;
+    padding: 5px;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 12px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.annexx-space .annexx-info{
+    position: relative;
+    font-size: 10px;
+    width: 100%;
+}
+
+.annexx-space .annexx-close{
+    position: absolute;
+    right: 2px;
+    top: -2px;
+    font-size: 12px;
+}
+
+.annexx-space .annexx-preview{
+    background-color: rgb(216, 216, 216);
+    width: 80%;
+    height: 90%;
+    border-radius: 8px;
+    border: 1px solid rgb(150, 150, 150);
+    overflow: hidden;
+    position: relative;
+}
+
+.annexx-space .img-preview{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.annexx-space .Text-advice{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.253);
+    user-select: none;
+}
+
+.annexx-space .Play-icon{
+    position: absolute;
+    background-color: rgba(85, 85, 85, 0.4);
+    color: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    height: 100%;
+    line-height: 90px;
+    top: 0;
+    left: 0;
+    /* transform: translate(-50%, -50%); */
+    font-size: 40px;
+}
+
+.annexx-space .pdf-icon{
+    position: absolute;
+    background-color: rgba(255, 240, 240, 0.753);
+    width: 100%;
+    height: 100%;
+    line-height: 90px;
+    top: 0;
+    left: 0;
+}
+
+.annexx-space .pdf-icon svg{
+    position: absolute;
+    color: #c93838;
+    filter: invert(26%) sepia(29%) saturate(4377%) hue-rotate(342deg) brightness(105%) contrast(80%);
+    width: 60%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.Annex-Tools{
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    padding: 5px 20px;
+    gap: 10px;
+    user-select: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-radius: 8px;
+}

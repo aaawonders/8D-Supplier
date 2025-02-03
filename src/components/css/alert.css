@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap');
+
+.alert{
+    border-radius: 11px;
+    font-family: 'Poppins', sans-serif;
+    z-index: 500;
+    width: 300px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0%) scale(1);
+    color: rgb(255, 255, 255);
+    background-color: rgb(161, 161, 161);
+    font-size: 14px;
+    user-select: none;
+    overflow: hidden;
+    /* animation-delay: 1s; */
+    /* animation: AlertOut ease-in 1s; */
+}
+
+.alert.alert-warn{
+    color: rgb(32, 32, 32);
+    background-color: rgb(226, 201, 61);
+}
+
+.alert.alert-success{
+    color: rgb(255, 255, 255);
+    background-color: rgb(2, 145, 66);
+}
+
+.alert.alert-error{
+    color: rgb(255, 255, 255);
+    background-color: rgb(145, 2, 33);
+}
+
+
+.alert .icon-info{
+    font-size: 20px;
+}
+
+.alert .bar-duration{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.alert .bar-duration .bar-progress{
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    height: 3px;
+    width: 100%;
+}
+
+.alert.alert-warn .bar-duration .bar-progress{
+    background-color: rgb(32, 32, 32);
+}
+
+@keyframes AlertIn {
+    0%{
+        transform: translateX(-50%) translateY(300%);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0%);
+    }
+}
+
+@keyframes AlertOut {
+    0%{
+        transform: translateX(-50%) translateY(0%);
+    }
+    100% {
+        transform: translateX(-50%) translateY(300%);
+    }
+}

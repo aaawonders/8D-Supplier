@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+         table, .tr-header td {
+            /* border: 1px solid black; */
+        }
+        .tr-header td{
+            text-align: center;
+            height: 80px;
+            font-size: 18px;
+        }
+        .tr-header td:nth-child(1){
+            max-width: 15%;
+        }
+        .tr-header td:nth-child(2){
+            max-width: 70%;
+        }
+        .tr-header td:nth-child(3){
+            max-width: 15%;
+        }
+        .logo{
+            width: 190px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr class="tr-header">
+                <td>
+                    <img class="logo" src="http://localhost:3000/data/logo/image.png"/>
+                </td>
+                <td>Laudo de Não Conformidade</td>
+                <td>LNC º: <span>001/24</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <span>Folha de Rosto</span>
+</body>
+</html>

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap');
+
+
+.Foto-Tab{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid rgb(238, 238, 238);
+    width: 100%;
+    height: 400px;
+}
+
+.Foto-Tab .foto-show{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.Foto-Tab .foto-show .FotoAtual{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+.Foto-Tab .Arrows span{
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.Foto-Tab .Arrows span:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px)
+}
+
+.Foto-Tab .Arrows .Arrow-left{
+    left: 1px;
+}
+
+.Foto-Tab .Arrows .Arrow-right{
+    right: 1px;
+}
+
+.info-basic{
+    position: absolute;
+    width: 100%;
+    min-height: 50px;
+    bottom: 0;
+    color: white;
+    font-size: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
+    backdrop-filter: blur(2px);
+    user-select: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility ease-in 0.2s;
+}
+
+.info-basic.active{
+    visibility: visible;
+    opacity: 1;
+    transition: visibility ease-in 0.2s, transform ease-in 0.2s;
+}
+
+.foto-index{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding: 5px;
+    justify-content: center;
+    display: flex;
+    gap: 5px;
+}
+
+.foto-pag{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.foto-pag.active{
+    background-color: white;
+}
+
+.foto-pag:hover{
+    transform: scale(1.4);
+    background-color: rgba(161, 161, 161, 0.432);
+    transition: ease-in 0.2s;
+}
+
+.foto-pag:active{
+    transform: scale(1.2);
+    transition: ease-in 0.2s;
+}
+
+.foto-pag:hover::after{
+    content: attr(index);
+    font-size: 10px;
+    line-height: 15px;
+    position: absolute;
+    top: 52%;
+    left: 49%;
+    transform: translate(-45%, -52%);
+    color: white;
+}
+
+.foto-pag.active:hover{
+    transform: scale(1.4);
+    background-color: rgb(255, 255, 255);
+}
+
+.foto-pag.active:hover::after{
+    content: attr(index);
+    color: rgb(0, 0, 0);
+}
+
+
+/* FullImage */
+
+.Pop-up{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.FullImage{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.FullImage .Tools{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(240, 240, 240);
+    border-bottom: 2px solid rgb(202, 202, 202);
+    width: 100%;
+    height: 40px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+}
+
+.Image{
+    cursor: move;
+}
+
+.ZoomBox{
+    height: 100%;
+    display: flex;
+    padding: 5px;
+    gap: 15px;
+}
+
+.zoom-btn{
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    line-height: 28px;
+    border-radius: 5px;
+}
+
+.zoom-btn:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.2s ease-in-out;
+}
+
+.Image{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.Image img{
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+}
+
+.close-fullimage{
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 30px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.divisor{
+    margin: 5px 10px;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 30px;
+}
+
+.zoom-btn.info.active{
+    background-color: rgb(61, 61, 61);
+    color: rgb(223, 223, 223);
+}
+
+
+.Info{
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    background-color: rgb(240, 240, 240);
+    border-right: 2px solid rgb(202, 202, 202);
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility ease-in 0.2s;
+    padding-top: 50px;
+}
+
+.Info.active{
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    background-color: rgba(240, 240, 240, 0.8);
+    border-right: 2px solid rgb(202, 202, 202);
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility ease-in 0.2s;
+}
+
+.Infos{
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+}

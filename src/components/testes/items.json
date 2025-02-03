@@ -1,0 +1,69 @@
+[
+    {
+        "id": 1,
+        "produto": "Bomba de Água VW EA211",
+        "codigo": "VW 01 31",
+        "desenho": "04E 121 600DF",
+        "rev": "02/02.12.21",
+        "comp": [
+            {
+                "id": 1,
+                "nome": "Carcaça do Termostato",
+                "codigo": "C 001 017",
+                "desenho": "04E 121 117L",
+                "rev": "A/08.10.13"
+            },
+            {
+                "id": 2,
+                "nome": "Carcaça Usinada",
+                "codigo": "C 001 022",
+                "desenho": "04E 121 042AE",
+                "rev": "03/18.05.18",
+                "sub": [
+                    {
+                        "id": 1,
+                        "nome": "Carcaça Bruta",
+                        "codigo": "C 100 010",
+                        "desenho": "010 041 802 RT",
+                        "rev": "03/08.05.18"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "nome": "Rolamento",
+                "codigo": "C 002 015",
+                "desenho": "04E 121 015B",
+                "rev": "21/08.05.20"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "produto": "Bomba de Água VW EA111",
+        "codigo": "VW 01 29",
+        "desenho": "030 121 016A",
+        "rev": "00/07.11.12"
+    },
+    {
+        "id":3,
+        "produto": "Bomba de Óleo VW EA111",
+        "codigo": "51GO VW 02 13",
+        "desenho": "030 115 105S",
+        "rev": "00/12.02.13"
+    },
+    {
+        "id":4,
+        "produto": "Bomba de Óleo 1.0l VW EA211",
+        "codigo": "VW 02 05",
+        "desenho": "04C 115 105F",
+        "rev": "09/13.03.17"
+    },
+    {
+        "id":5,
+        "produto": "Bomba de Óleo 1.6l VW EA211",
+        "codigo": "VW 02 04",
+        "desenho": "04E 115 105R",
+        "rev": "03/03.02.15"
+    }
+]

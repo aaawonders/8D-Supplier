@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap');
+
+.LoginPage{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.LoginBox{
+    padding: 20px;
+    background-color: rgba(228, 228, 228, 0.2);
+    border-radius: 11px;
+    border: 1px solid rgb(87, 87, 87);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 500px;
+    height: 25rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.LoginBox.advice{
+    height: 13rem;
+    user-select: none;
+}
+
+.advice .icon{
+    color: green;
+    font-size: 40px;
+}
+
+.advice .text-content{
+    font-size: 18px;
+}
+
+.advice button{
+    background-color: rgb(9, 155, 82);
+    color: white;
+    padding: 8px 30px;
+    border-radius: 8px;
+}
+
+.advice button:active{
+    transform: scale(0.9);
+    transition: ease 0.1s;
+}
+
+.input-div{
+    position: relative;
+    width: 100%;
+}
+
+.register .input-div:nth-child(0){
+    background-color: red;
+}
+
+.input-div.advice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.info-repSenha{
+    font-size: 12px;
+    color: rgb(226, 60, 18);
+    user-select: none;
+    display: none;
+}
+
+.info-repSenha.active{
+    display: block;
+}
+
+.input-form{
+    width: 80%;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.input-form.error{
+    background-color: rgba(255, 205, 205, 0.719);
+    color: rgb(99, 0, 0);
+    border-color: rgb(194, 0, 0);
+    border-width: 2px;
+}
+
+.input-form::selection{
+    background-color: rgb(1, 187, 79);
+    color: white;
+}
+
+.input-form:focus{
+    outline: none;
+}
+
+.input-form::placeholder{
+    color: black;
+}
+
+.show-pass{
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 5px;
+}
+
+.show-pass:hover, .show-pass.active{
+    background-color: rgba(0, 0, 0, 0.15);
+    color: rgb(1, 187, 79);
+    transition: ease-in-out 0.2s;
+}
+
+.keep-logged{
+    font-size: 14px;
+    padding: 5px 6px;
+    padding-left: 29px;
+    position: relative;
+    user-select: none;
+    border-radius: 8px;
+}
+
+.keep-logged.active{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.keep-logged::before{
+    content: '';
+    background-color: rgb(219, 219, 219);
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+}
+
+.keep-logged.active::before{
+    content: '';
+    background-color: rgb(9, 180, 75);
+}
+
+.btn-login{
+    background-color: rgb(8, 161, 54);
+    color: white;
+    border-radius: 8px;
+    padding: 8px 20px;
+}
+
+.btn-login:active{
+    transform: scale(0.9);
+    transition: transform ease 0.05s;
+}
+
+.btn-changeRegister{
+    color: rgb(9, 180, 75);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Registrar */
+
+.val-password {
+    position: fixed;
+    background-color: rgba(199, 199, 199, 0.2);
+    border: 1px solid rgba(128, 128, 128);
+    width: 300px;
+    height: 25rem;
+    right: -350px;
+    padding: 20px 5px;
+    border-radius: 8px;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.val-password.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.progress-bar{
+    height: 10px;
+    width: 90%;
+    border-radius: 8px;
+    background-color: rgb(184, 184, 184);
+    overflow: hidden;
+    display: flex;
+}
+
+.progress-bar span {
+    padding: 2px;
+    height: 100%;
+    width: 0%;
+    transition: ease-in-out 0.5s;
+}
+
+.progress-bar.p20 span {
+    width: 20%;
+    background-color: rgb(218, 37, 37);
+    transition: ease-in-out 0.5s;
+}
+
+.progress-bar.p40 span {
+    width: 40%;
+    background-color: rgb(218, 79, 37);
+    transition: ease-in-out 0.5s;
+}
+
+.progress-bar.p60 span {
+    width: 60%;
+    background-color: rgb(218, 206, 37);
+    transition: ease-in-out 0.5s;
+}
+
+.progress-bar.p80 span {
+    width: 80%;
+    background-color: rgb(155, 218, 37);
+    transition: ease-in-out 0.5s;
+}
+
+.progress-bar.p100 span {
+    width: 1000%;
+    background-color: rgb(37, 218, 37);
+    transition: ease-in-out 0.5s;
+}
+
+
+.val-list{
+    margin-top: 20px;
+    list-style: none;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+}
+
+.val-list li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 5px;
+    border-radius: 8px;
+}
+
+.val-list li svg{
+    font-size: 15px;
+    color: crimson;
+}
+
+.val-list li.ok{
+    background-color: rgb(181, 233, 181);
+    color: rgb(4, 63, 4);
+}
+
+.val-list li.ok svg{
+    font-size: 15px;
+    color: rgb(0, 153, 46);
+}
+
+.alert-login{
+    position: absolute;
+    top: -50px;
+    background-color: rgba(255, 189, 189, 0.8);
+    width: 90%;
+    border-radius: 11px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+}
+
+.alert-login svg {
+    font-size: 20px;
+    color:  rgb(112, 0, 0);
+}

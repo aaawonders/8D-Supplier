@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap');
+
+.Profile{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.Profile .Upper-Tools{
+    width: 100%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Profile .Upper-Tools .Title{
+    width: 100%;
+    padding: 5px 0px;
+}
+
+.Profile  .Upper-Tools .Op-list{
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    gap: 10px;
+    position: relative;
+}
+
+.Profile .btn-regular{
+    min-width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    transition: ease-in 0.2s;
+}
+
+.Profile .btn-regular:hover{
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: ease-in 0.2s;
+}
+
+.Profile .btn-regular:active{
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
+.btn-text{
+    display: flex;
+    padding: 2px 5px;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.Profile  .btn-changeMode.active{
+    background-color: white;
+    color: rgb(22, 133, 68);
+    animation: pulse 0.2s ease-in-out;
+    animation-delay: 0.2s;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.Profile .Upper-Tools .Op-list .createdby{
+    position: absolute;
+    right: 20px;
+    background-color: white;
+    color: rgb(22, 133, 68);
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    user-select: none;
+}
