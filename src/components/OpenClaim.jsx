@@ -64,7 +64,7 @@ const loggout = () => {
     window.location.href = '/login';
 }
 
-const UpperBar = ({lnc, mode, setMode, claimBody}) => {
+const UpperBar = ({lnc, mode, setMode, claimBody, setInPreview}) => {
     const [logged, setLogIn] = useState()
 
     useEffect(() => {
@@ -125,7 +125,7 @@ const UpperBar = ({lnc, mode, setMode, claimBody}) => {
                     <FontAwesomeIcon icon={'fa-paper-plane'}/>
                     Enviar
                 </button>
-                <button title={'Prévia do Relatório'} className={`btn-regular btn-text btn-report`} onClick={() => ModeChange(mode)}>
+                <button title={'Prévia do Relatório'} className={`btn-regular btn-text btn-report`} onClick={() => setInPreview(true)}>
                     <FontAwesomeIcon icon={'fa-paperclip'}/>
                     Prévia Relatório
                 </button>
@@ -288,9 +288,9 @@ const Input = ({key, select, label, valueSet = '', setChange, size, invalido, is
 
     const sizes = ['small', 'medium', 'big']
 
-    var sizeChosen = '';
+    // var sizeChosen = '';
 
-    const sizeChosen = sizes.includes(size) ? size : '';
+    // const sizeChosen = sizes.includes(size) ? size : '';
     
     const clickOp = (val) => {
         setValue(val)
@@ -326,7 +326,7 @@ const Input = ({key, select, label, valueSet = '', setChange, size, invalido, is
     }
 
     return (
-        <div key={key} className={`div-input ${sizeChosen} ${invalido ? 'invalid' : ''}`}>
+        <div key={key} className={`div-input ${size} ${invalido ? 'invalid' : ''}`}>
             <input onChange={(e) => changeValue(e)} value={value} placeholder={label}/>
             {value && (
                 <span onClick={delText} className={`delText`}><FontAwesomeIcon icon={'fa-x'}/></span>
@@ -609,7 +609,23 @@ const getPecas = async (produto) => {
     }      
 }
 
+
+const PreviewPDF = ({setInPreview}) => {
+
+    return (
+        <div className="pdf-popup">
+            <button className="btn-close" onClick={() => setInPreview(false)}><FontAwesomeIcon icon={faX}/></button>
+            <div className="pdf-preview">
+                <div className="pdf-content">
+                    <iframe src="http://192.168.0.119:3000/data/relatorio.pdf" width="100%" height="100%"></iframe>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const OpenClaim = () => {
+    const [inPreview, setInPreview] = useState(false)
     const [fornList, setFornList] = useState('')
     const [pecasList, setPecasList] = useState('')
     const [claimBody, setClaimBody] = useState({
@@ -733,7 +749,7 @@ const OpenClaim = () => {
     return (
         <div className="Main OpenClaim">
             <TopBar title={'Abrir Reclamação'}/>
-            <UpperBar claimBody={claimBody} />
+            <UpperBar claimBody={claimBody} setInPreview={setInPreview} />
             <Tabs width='80%' colorScheme='green'>
                 <TabList>
                     <Tab>Informações</Tab>
@@ -801,6 +817,9 @@ const OpenClaim = () => {
                     </TabPanel>
                 </TabPanels>
             </Tabs>
+            {inPreview && (
+                <PreviewPDF setInPreview={setInPreview} />
+            )}
         </div>
     )
 }
